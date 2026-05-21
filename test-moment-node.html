@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moment Node Test</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+        }
+
+        @keyframes breathe {
+            0%, 100% { opacity: 0.8; }
+            50% { opacity: 1; }
+        }
+
+        @keyframes fade-in {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .animate-breathe {
+            animation: breathe 4s ease-in-out infinite;
+        }
+
+        .animate-fade-in {
+            animation: fade-in 0.5s ease-out forwards;
+        }
+
+        body {
+            background-color: #0f172a;
+            color: #cbd5e1;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        .morandi-green { color: #7fb37f; }
+        .morandi-blue { color: #7f9fb3; }
+        .morandi-purple { color: #9f7fb3; }
+    </style>
+</head>
+<body>
+    <div class="min-h-screen flex items-center justify-center p-8">
+        <div class="relative">
+            <div class="relative animate-float animate-fade-in px-3 py-2 rounded-lg backdrop-blur-sm bg-black/30 border border-gray-400/20 morandi-green transition-all duration-300 max-w-xs break-words">
+                <div class="flex items-start justify-between">
+                    <p class="text-sm font-medium tracking-wide leading-relaxed">
+                        Write journal
+                    </p>
+                </div>
+                <div class="mt-1 flex items-center justify-between">
+                    <span class="text-xs text-gray-400/60">
+                        10:00 AM
+                    </span>
+                    <span class="text-xs opacity-50">
+                        #1
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

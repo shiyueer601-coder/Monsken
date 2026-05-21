@@ -1,0 +1,1 @@
+export { intentionRepository } from './intentionRepository';
